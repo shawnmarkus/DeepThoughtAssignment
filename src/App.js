@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Expandable from "./Expandable";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ResponsiveNavbar from "./ResponsiveNavbar";
+import "./app.css";
+import data from "./Data.json";
+import AssetsCollectionPage from "./AssetsCollectionPage";
 
 function App() {
+  const [selected, setSelected] = useState(data.tasks[0].task_id);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <ResponsiveNavbar />
+        <Expandable
+          data={data}
+          selected={selected}
+          updateSelected={(taskId) => setSelected(taskId)}
+        />
+        <AssetsCollectionPage selected={selected} />
+      </div>
     </div>
   );
 }
