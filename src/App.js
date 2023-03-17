@@ -5,6 +5,7 @@ import ResponsiveNavbar from "./ResponsiveNavbar";
 import "./app.css";
 import data from "./Data.json";
 import AssetsCollectionPage from "./AssetsCollectionPage";
+import Title from "./Title.jsx";
 
 function App() {
   const [selected, setSelected] = useState(data.tasks[0].task_id);
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <div>
         <ResponsiveNavbar />
+        <Title title={data.title} />
         <Expandable
           data={data}
           selected={selected}
