@@ -5,13 +5,17 @@ import AssetContainer from "./AssetContainer";
 const AssetsCollectionPage = ({ selected }) => {
   const task = data.tasks.find((itertask) => itertask.task_id === selected);
   return (
-    <div>
-      {JSON.stringify(task)}
-
-      {task.assets.map((asset, indx) => {
-        return <AssetContainer asset={asset} key={indx} />;
-      })}
-    </div>
+    <center>
+      <div className="gridEnclosingContainer">
+        <div className="gridContainer">
+          {task.assets.map((asset, indx) => {
+            return (
+              <AssetContainer className="gridBox" asset={asset} key={indx} />
+            );
+          })}
+        </div>
+      </div>
+    </center>
   );
 };
 

@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 
 function Expandable({ data, selected, updateSelected }) {
   const [show, setShow] = useState(true);
-  const [hasBeenClicked, setHasBeenClicked] = useState(false);
+  const [hasBeenClicked, setHasBeenClicked] = useState(true);
   const OffcanvasRef = useRef();
 
   const handleClose = () => {
