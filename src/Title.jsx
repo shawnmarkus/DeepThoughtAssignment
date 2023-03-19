@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 const Title = ({ title }) => {
   return (
     <center>
-      <div className="enclosingBox ">
+      <div className="w-75 ">
         <div className="titleStyle">
           <div>{title}</div>
           <div>
