@@ -11,9 +11,9 @@
   border-radius: 0 15px 0 0;
 }
 
-.offcanvas.show {
+/* .offcanvas.show {
   display: none;
-}
+} */
 
 /* for asset collection page */
 
@@ -38,7 +38,7 @@
 .masterConatiner {
   /* background-color: transparent; */
   border-radius: 15px 15px 15px 15px;
-
+  overflow-y: auto;
   height: 40rem;
   box-shadow: 0 0 15px 10px rgba(133, 126, 126, 0.325);
   /* position: relative; */
@@ -79,5 +79,78 @@
 
 #example-collapse-text {
   padding: 1rem 2rem;
-  box-shadow: 0px 2px 10px 1px rgb(68, 67, 67);
+  box-shadow: 0px 2px 10px 0px rgb(68, 67, 67);
+}
+
+.bodyContainer {
+  padding: 2rem 0;
+}
+
+.thread1 {
+  /* background-color: #f0f0f0; */
+  /* grid-area: "box1"; */
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-column-end: 3;
+  min-width: inherit;
+}
+
+.inputEncloser {
+  background-color: #f0f0f0;
+  padding: 3px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputEncloser > p {
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+}
+
+.inputEncloser > textarea {
+  outline: unset;
+  border-radius: 20px;
+  border: none;
+  padding: 1rem 0.5rem;
+  max-height: 100px;
+  width: 100%;
+}
+
+/* .fullsize {
+  width: inherit;
+} */
+
+.interpretation {
+  /* grid-area: "box2"; */
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-column-end: 4;
+}
+
+.interpretation select {
+  padding: 1rem;
+  background-color: transparent;
+  border: 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 10px #f0f0f0;
+}
+
+.summary {
+  /* grid-area: "box3"; */
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-column-end: 4;
+}
+
+.threadBuilderContainer {
+  display: grid;
+  /* padding: auto; */
+  grid-template-columns: 2rem 1fr 1fr 2rem;
+  grid-auto-rows: minmax(200px, auto);
+  row-gap: 2rem;
+  column-gap: 1rem;
+  /* grid-template-areas:
+    "box1 box2"
+    "box3 box3"; */
 }
