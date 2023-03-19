@@ -11,16 +11,14 @@ function App() {
   const [selected, setSelected] = useState(data.tasks[0].task_id);
   return (
     <div className="App">
-      <div>
-        <ResponsiveNavbar />
-        <Title title={data.title} />
-        <Expandable
-          data={data}
-          selected={selected}
-          updateSelected={(taskId) => setSelected(taskId)}
-        />
-        <AssetsCollectionPage selected={selected} />
-      </div>
+      <ResponsiveNavbar />
+      <Title title={data.title} />
+      <Expandable
+        data={data}
+        selected={selected}
+        updateSelected={(taskId) => setSelected(taskId)}
+      />
+      <AssetsCollectionPage selected={selected} />
     </div>
   );
 }
