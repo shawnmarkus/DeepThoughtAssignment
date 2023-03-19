@@ -6,10 +6,15 @@ import Card from "react-bootstrap/Card";
 const AssetsCollectionPage = ({ selected }) => {
   const task = data.tasks.find((itertask) => itertask.task_id === selected);
   return (
-    <center>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <div className="enclosingBox">
         <Card bg="Light" style={{ width: "100%" }} className="mb-4">
-          {/* <Card.Header>Header</Card.Header> */}
           <Card.Body
             style={{
               backgroundColor: "#e9ecef",
@@ -37,13 +42,11 @@ const AssetsCollectionPage = ({ selected }) => {
 
         <div className="gridContainer">
           {task.assets.map((asset, indx) => {
-            return (
-              <AssetContainer className="gridBox" asset={asset} key={indx} />
-            );
+            return <AssetContainer key={indx} assetInfo={asset} />;
           })}
         </div>
       </div>
-    </center>
+    </div>
   );
 };
 
