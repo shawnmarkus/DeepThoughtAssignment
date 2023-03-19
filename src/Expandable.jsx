@@ -1,5 +1,7 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import React, { useState, useRef } from "react";
+import Image from "react-bootstrap/Image";
+import arrow from "./assets/arrow.svg";
 
 function Expandable({ data, selected, updateSelected }) {
   const [show, setShow] = useState(true);
@@ -43,7 +45,9 @@ function Expandable({ data, selected, updateSelected }) {
         onHide={handleClose}
       >
         <Offcanvas.Header style={{ backgroundColor: "brown" }}>
-          <Offcanvas.Title onClick={handleClose}>Expand</Offcanvas.Title>
+          <Offcanvas.Title onClick={handleClose}>
+            <Image src={arrow}></Image>
+          </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           {data.tasks.map((task, idx) => {
