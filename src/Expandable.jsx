@@ -57,14 +57,16 @@ function Expandable({ data, selected, updateSelected }) {
                 </ul>
               </div>
             ) : (
-              <center>
-                <div
-                  onClick={updateSelected(task.task_id)}
-                  style={handleColor(task.task_id)}
-                >
-                  {idx + 1}
+              <div style={{ display: "grid" }}>
+                <div style={{ justifySelf: "center", alignSelf: "center" }}>
+                  <div
+                    onClick={updateSelected(task.task_id)}
+                    style={handleColor(task.task_id)}
+                  >
+                    {idx + 1}
+                  </div>
                 </div>
-              </center>
+              </div>
             );
           })}
         </Offcanvas.Body>
